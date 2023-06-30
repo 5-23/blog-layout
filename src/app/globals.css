@@ -61,16 +61,42 @@ header > label > p{
   transform: rotate(-45deg) translateX(4px) translateY(-5px);
 }
 #open-list:checked ~ nav{
-  transform: scaleX(1);
+  transform: translateX(0);
 }
 
 
 nav{
   position: fixed;
+  display: flex;
   transition: all .5s;
-  transform: scaleX(0);
+  transform: translateX(-100%);
   top: 55px;
   background-color: #ddd;
-  width: 20vw;
+  /* width: 20vw; */
+  width: 250px;
   height: 100vh;
+  flex-direction: column;
+}
+
+hr{
+  border: solid 1px #eee;
+  margin: 10px 0 20px 0
+}
+
+label{
+  cursor: pointer;
+}
+
+nav > a{
+  
+  padding: 20px 0 20px 10px;
+  width: 100%;
+  font-size: 20px;
+  color: #000;
+  text-decoration: none;
+  transition: all .3s;
+}
+
+nav > a:hover{
+  background-color: #0000001e;
 }
