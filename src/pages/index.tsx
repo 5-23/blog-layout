@@ -2,7 +2,6 @@
 import Image from 'next/image'
 import Header from './header';
 import { RefObject, useRef } from 'react';
-
 export default function Home() {
   let contents = [
     <>
