@@ -1,12 +1,28 @@
+import Link from "next/link";
 import { RefObject } from "react";
-export default function Header(){
+export default function Header(props: {name: string | string[] | undefined}){
+    let arr: string[] = []
+    let rust = [
+        "1. 대충",
+        "2. 엄청난",
+        "3. 내용",
+    ]
+    let python = [
+        "1. 대충",
+        "2. 엄청난",
+        "3. 내용",
+    ]
+    switch (props.name){
+        case "rust": arr = [...rust]; break;
+        case "python": arr = [...python]; break;
+    }
     return(
         <header>
             <input type="checkbox" id="open-list"/>
             <nav>
-                <a href="#1">1. 대충</a>
-                <a href="#2">2. 엄청난</a>
-                <a href="#1">3. 내용</a>
+                {arr.map((e, i) => (
+                    <Link href={`/${props.name}/${i}`}>{e}</Link>
+                ))}
             </nav>
 
             <label htmlFor="open-list">
