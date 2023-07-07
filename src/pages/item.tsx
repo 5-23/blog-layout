@@ -17,11 +17,11 @@ export default function Item(props: {name: string, d: string}){
           <LinkOverlay
             color="#181818"
             textDecoration="none"
-            href={`${props.name.toLowerCase()}/0`}
+            href={`${props.name?.toLowerCase()}/0`}
             
           >
             <Box
-              bgImage={`/blog/${props.name.toLowerCase()}.png`}
+              bgImage={`/blog/${props.name?.toLowerCase()}.png`}
               w={"100%"}
               h={"50%"}
               bgColor={"#ddd"}
