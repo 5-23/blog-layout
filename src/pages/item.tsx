@@ -3,7 +3,8 @@ import { color } from "framer-motion";
 export default function Item(props: {name: string, d: string}){
     return(
         <LinkBox
-          border="solid 1px"
+          borderRadius="15px"
+          overflow={"hidden"}
           minW={300}
           minH={180}
           transition={"all .3s"}
@@ -13,7 +14,7 @@ export default function Item(props: {name: string, d: string}){
             transform: "translateY(-3px)",
             boxShadow: "0 0 20px #aaa"
           }}
-          >
+        >
           <LinkOverlay
             color="#181818"
             textDecoration="none"
@@ -28,9 +29,6 @@ export default function Item(props: {name: string, d: string}){
               bgSize={"auto 180px"}
               bgPos={"50% 50%"}
               bgRepeat={"no-repeat"}
-              _hover={{
-                bgColor: "red"
-              }}
             ></Box>
             <Box
               p={10}
