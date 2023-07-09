@@ -21,12 +21,16 @@ export default function Home() {
           alt='profile'
           style={{borderRadius: "100%"}}
         ></Image>
-        <h1>xxxx의 블로그</h1>
+        <Box
+          fontSize={"4vh"}
+          fontWeight={900}
+        >xxxx의 블로그</Box>
       </Flex>
       <Flex
-        gap={10}
+        gap={16}
         p="0 10vw"
         justifyContent="center"
+        flexWrap={"wrap"}
       >
         
         <Item name="Rust" d="Rust The Programming Language"/>

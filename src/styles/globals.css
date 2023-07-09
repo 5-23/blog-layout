@@ -22,6 +22,7 @@ header{
 
   align-items: center;
   backdrop-filter: blur(10px);
+  z-index: 1000;
 }
 
 
@@ -71,11 +72,13 @@ nav{
   transition: all .5s;
   transform: translateX(-100%);
   top: 55px;
-  background-color: #ddd;
+  background-color: #ddddddc3;
+  backdrop-filter: blur(10px);
   /* width: 20vw; */
   width: 250px;
   height: 100vh;
   flex-direction: column;
+  z-index: 1000;
 }
 
 hr{
